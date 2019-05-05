@@ -27,9 +27,8 @@ require 'slackwebhook'
 
 hook = Slackwebhook.new('hook_url')
 hook.type = "alert"
-hook.message = "example: Change the configuration of servers"
-hook.send
-puts hook.output #return net/http object back
+hook.send = "example: Change the configuration of servers"
+response = hook.output #return net/http object back
 ```
 
 ## Message Types
